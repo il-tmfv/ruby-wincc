@@ -30,5 +30,4 @@ end
 
 # TODO
 * Saving to files
-* Adding VBA script start and end parts
 * Generator for models

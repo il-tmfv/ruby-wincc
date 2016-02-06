@@ -1,6 +1,14 @@
 Dir["./modules/*"].each {|file| require file}
 
-module Wincc
+module Wincc    
+    def self.script_start
+        puts "Sub GeneratedScript()\r\nDim objHMIGO As HMIGO\r\nSet objHMIGO = New HMIGO\r\n"
+    end
+    
+    def self.script_end
+        puts "Set objHMIGO = Nothing\r\nEnd Sub"
+    end
+    
     class Model
         extend WinccTagType
         
